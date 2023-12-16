@@ -1,5 +1,32 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿
 @{
+ViewData["Title"] = "Cadastrar Emprestimo";
 }
+<div class="container bg-dark p-5 rounded-5">
+
+    <div class="mb-5 text-center">
+        <h1 class="text-light">Cadastrar Emprestimo</h1>
+    </div>
+
+<form>
+    <div class="mb-3">
+            <label for="Recebedor" class="form-label text-light">Recebedor</label>
+            <input type="text" class="form-control" id="Recebedor" placeholder="Quem esta Recebendo o Livro ?">
+
+    </div>
+    <div class="mb-3">
+            <label for="Fornecedor" class="form-label text-light">Fornecedor</label>
+            <input type="text" class="form-control" id="Fornecedor" placeholder="Quem Esta Fornecendo ?">
+    </div>
+    <div class="mb-3">
+            <label class="form-label text-light" for="Livro">Livro</label>
+            <input type="text" class="form-control" id="Livro" placeholder="Qual o Nomde Do Livro">
+       
+    </div>
+
+    <div class="d-flex gap-5 mt-5">
+    <button type="submit" class="btn btn-success w-50">Enviar</button>
+    <a class="btn btn-primary w-50" asp-controller="Emprestimo" asp-action="Index">Voltar</a>
+        </div>
+</form>
+</div>

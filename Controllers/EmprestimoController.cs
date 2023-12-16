@@ -11,10 +11,16 @@ namespace Web_Library.Controllers
         {
             _context = context;
         }
+        [HttpGet]
         public IActionResult Index()
         {
             IEnumerable<EmprestimosModel> emprestimos = _context.Emprestimos;
             return View(emprestimos);
+        }
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View();
         }
     }
 }
