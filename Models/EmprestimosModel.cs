@@ -10,6 +10,8 @@ namespace Web_Library.Models
         [Required]
         public string? Recebedor { get; set; }
         [Required]
+        public string? Livro { get; set; }
+        [Required]
         public string Fornecedor{ get; set; }
         [Required]
         public DateTime DataEmprestimo { get; set; } = DateTime.Now;
