@@ -10,10 +10,10 @@ Projeto desenvolvido em ASP.Net Core MVC e MySQL para criar um Sistema de Empré
 ## Screenshots
 
 ### Página Inicial
-![Home](imagemHome.png)
+![Home](assets/Capa.jpeg)
 
 ### Tabela de Empréstimos
-![Tabela](imagemDaTable.png)
+![Tabela](assets/Tabela.jpeg)
 
 
 
