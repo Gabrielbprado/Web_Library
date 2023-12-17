@@ -12,6 +12,7 @@
         <th scope="col">Fornecedor</th>
         <th scope="col">Livro</th>
         <th scope="col">Ultima Atualização</th>
+        <th scope="col"></th>
         
     </tr>
     </thead>
@@ -25,6 +26,10 @@
                     <td>@item.Fornecedor</td>
                     <td>@item.Livro</td>
                     <td>@item.DataEmprestimo</td>
+                        <td><a asp-controller="Emprestimo" asp-action = "Edit"  asp-route-id ="@item.Id" class="btn btn-warning mx-2">Editar</a>
+                            <a asp-controller="Emprestimo" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger mx-2">Excluir</a>
+                        </td>
+                        
                 </tr>
             }
 

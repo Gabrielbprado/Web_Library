@@ -7,13 +7,12 @@ namespace Web_Library.Models
         [Required]
         [Key]
         public int Id { get; set; }
-        [Required]
+        [Required(ErrorMessage = "O Campo Recebedor é Obrigatório")]
         public string? Recebedor { get; set; }
-        [Required]
+        [Required(ErrorMessage = "O Campo Livro é Obrigatório")]
         public string? Livro { get; set; }
-        [Required]
+        [Required(ErrorMessage = "O Campo Fornecedor é Obrigatório")]
         public string Fornecedor{ get; set; }
-        [Required]
         public DateTime DataEmprestimo { get; set; } = DateTime.Now;
     }
 }

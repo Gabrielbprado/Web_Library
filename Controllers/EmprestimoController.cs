@@ -2,6 +2,7 @@
 using Web_Library.Data;
 using Web_Library.Models;
 
+
 namespace Web_Library.Controllers
 {
     public class EmprestimoController : Controller
@@ -22,5 +23,77 @@ namespace Web_Library.Controllers
         {
             return View();
         }
+
+       
+
+        [HttpPost]
+        public IActionResult Create(EmprestimosModel model)
+        {
+            if(ModelState.IsValid)
+
+            {
+                _context.Emprestimos.Add(model);
+                _context.SaveChanges();
+                return RedirectToAction("Index");
+                
+            }
+
+            return View(model);
+
+        }
+
+        [HttpGet]
+        public IActionResult Edit(int? id)
+        {
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+            EmprestimosModel? emprestimo = _context.Emprestimos.FirstOrDefault(x => x.Id == id);
+
+            if (emprestimo == null) { return NotFound(); }
+
+            return View(emprestimo);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(EmprestimosModel model)
+        {
+            if(ModelState.IsValid)
+            {
+                _context.Emprestimos.Update(model);
+                _context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public IActionResult Delete(int? id)
+        {
+            if(id == null || id == 0)
+            {
+                return NotFound();
+            }
+            EmprestimosModel? emprestimo = _context.Emprestimos.FirstOrDefault(x => x.Id == id);
+
+            if(emprestimo == null) { return NotFound(); }
+
+            
+            return View(emprestimo);
+        }
+
+        [HttpPost]
+                public IActionResult Delete(EmprestimosModel model)
+        {
+
+                    _context.Emprestimos.Remove(model);
+                    _context.SaveChanges();
+                 return RedirectToAction("Index");
+        }
+
+
+
+
     }
 }
