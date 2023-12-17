@@ -54,4 +54,4 @@ jobs:
           app-name: 'Livraria-Web-MVC'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_D6A1629B12C54406BC610D751228753F }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_35EE33CB8BA24D8B9CC86A7278772A00 }}
