@@ -3,9 +3,19 @@
     <div class="container">
         <div class="d-flex justify-content-between align-items-center mb-5">
             <h1>Emprestimos</h1>
-        <a class="btn btn-success mx-2" asp-controller="Emprestimo" asp-action="Create">Novo Emprestimo</a>
+        <a class="btn btn-success mx-2" asp-controller="Emprestimo" asp-action="Create"><i class="bi bi-file-earmark-plus-fill mx-2"></i>Novo Emprestimo</a>
                 </div>
-<table class="table table-dark table-hover">
+
+    @if (TempData["msgDeSucesso"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show text-light" role="alert">
+            <strong>@TempData["msgDeSucesso"]</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+    
+
+    <table id="emprestimos" class=" table table-light table-hover mt-5">
     <thead>
     <tr>
         <th scope="col">Recebedor</th>
@@ -26,8 +36,9 @@
                     <td>@item.Fornecedor</td>
                     <td>@item.Livro</td>
                     <td>@item.DataEmprestimo</td>
-                        <td><a asp-controller="Emprestimo" asp-action = "Edit"  asp-route-id ="@item.Id" class="btn btn-warning mx-2">Editar</a>
-                            <a asp-controller="Emprestimo" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger mx-2">Excluir</a>
+                        <td>
+                            <a asp-controller="Emprestimo" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning mx-2"><i class="bi bi-pencil mx-2"></i>  Editar</a>
+                            <a asp-controller="Emprestimo" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger mx-2"><i class="bi bi-x-circle-fill mx-2"></i>  Excluir</a>
                         </td>
                         
                 </tr>

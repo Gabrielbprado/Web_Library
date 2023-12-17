@@ -14,18 +14,18 @@ ViewData["Title"] = "Editar emprestimo";
     <input type="hidden" asp-for="Id" />
     <div class="mb-3">
             <label for="Recebedor" class="form-label text-light">Recebedor</label>
-            <input type="text" class="form-control" id="Recebedor" placeholder="Quem esta Recebendo o Livro ?"  asp-for="Recebedor">
+            <input type="text" class="form-control text-light" id="Recebedor" placeholder="Quem esta Recebendo o Livro ?"  asp-for="Recebedor">
             <span asp-validation-for="Recebedor" class="text-danger"></span>
 
     </div>
     <div class="mb-3">
             <label for="Fornecedor" class="form-label text-light">Fornecedor</label>
-            <input type="text" class="form-control" id="Fornecedor" placeholder="Quem Esta Fornecendo ?" asp-for="Fornecedor">
+            <input type="text" class="form-control text-light" id="Fornecedor" placeholder="Quem Esta Fornecendo ?" asp-for="Fornecedor">
             <span asp-validation-for="Fornecedor" class="text-danger" ></span>
         </div>
     <div class="mb-3">
             <label class="form-label text-light" for="Livro">Livro</label>
-            <input type="text" class="form-control" id="Livro" placeholder="Qual o Nomde Do Livro" asp-for="Livro">
+            <input type="text" class="form-control text-light" id="Livro" placeholder="Qual o Nomde Do Livro" asp-for="Livro">
             <span asp-validation-for="Livro" class="text-danger"></span>
     </div>
 

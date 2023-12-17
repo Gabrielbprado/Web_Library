@@ -34,6 +34,7 @@ namespace Web_Library.Controllers
             {
                 _context.Emprestimos.Add(model);
                 _context.SaveChanges();
+                TempData["msgDeSucesso"] = "Emprestimo Cadastrado com Sucesso!";
                 return RedirectToAction("Index");
                 
             }
@@ -63,6 +64,7 @@ namespace Web_Library.Controllers
             {
                 _context.Emprestimos.Update(model);
                 _context.SaveChanges();
+                TempData["msgDeSucesso"] = "Emprestimo Atualizado com Sucesso!";
                 return RedirectToAction("Index");
             }
             return RedirectToAction("Index");
@@ -89,6 +91,7 @@ namespace Web_Library.Controllers
 
                     _context.Emprestimos.Remove(model);
                     _context.SaveChanges();
+            TempData["msgDeSucesso"] = "Emprestimo Removido com Sucesso!";
                  return RedirectToAction("Index");
         }
 
