@@ -13,6 +13,6 @@ namespace Web_Library.Models
         public string? Livro { get; set; }
         [Required(ErrorMessage = "O Campo Fornecedor é Obrigatório")]
         public string Fornecedor{ get; set; }
-        public DateTime DataEmprestimo { get; set; } = DateTime.Now;
+        public DateTime DataEmprestimo { get; set; } 
     }
 }

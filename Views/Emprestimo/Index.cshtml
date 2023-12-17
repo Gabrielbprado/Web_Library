@@ -3,8 +3,16 @@
     <div class="container">
         <div class="d-flex justify-content-between align-items-center mb-5">
             <h1>Emprestimos</h1>
-        <a class="btn btn-success mx-2" asp-controller="Emprestimo" asp-action="Create"><i class="bi bi-file-earmark-plus-fill mx-2"></i>Novo Emprestimo</a>
-                </div>
+            <div>
+            <a class="btn btn-success mx-2" asp-controller="Emprestimo" asp-action="Exportar"><i class="bi bi-file-earmark-plus-fill mx-2"></i>Exportar</a>
+
+                <a class="btn btn-success mx-2" asp-controller="Emprestimo" asp-action="Create"><i class="bi bi-file-earmark-plus-fill mx-2"></i>Novo Emprestimo</a>
+
+            </div>
+
+
+
+        </div>
 
     @if (TempData["msgDeSucesso"] != null)
     {
@@ -21,7 +29,7 @@
         <th scope="col">Recebedor</th>
         <th scope="col">Fornecedor</th>
         <th scope="col">Livro</th>
-        <th scope="col">Ultima Atualização</th>
+        <th scope="col">Data de Emprestimo</th>
         <th scope="col"></th>
         
     </tr>
