@@ -57,6 +57,7 @@ dlldata.c
 
 # Benchmark Results
 BenchmarkDotNet.Artifacts/
+.vs/WebLibrary/FileContentIndex/46d86ebb-bd9c-4270-b8ea-e8d091ff3448.vsidx
 
 # .NET Core
 project.lock.json
@@ -117,6 +118,8 @@ ipch/
 *.vsp
 *.vspx
 *.sap
+*.vs
+FileContentndex/
 
 # Visual Studio Trace Files
 *.e2e

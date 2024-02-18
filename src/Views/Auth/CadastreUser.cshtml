@@ -1,0 +1,31 @@
+﻿@model UserModel
+@{
+    ViewData["Title"] = "Cadastro de Usuário";
+}
+
+<h2>Cadastro de Usuário</h2>
+
+@using (Html.BeginForm("CadastreUser", "Auth", FormMethod.Post, new { @class = "user-form" }))
+{
+    <div class="form-group">
+        @Html.LabelFor(model => model.UserName)
+        @Html.TextBoxFor(model => model.UserName, new { @class = "form-control", placeholder = "Nome de Usuário" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Email)
+        @Html.TextBoxFor(model => model.Email, new { @class = "form-control", placeholder = "Endereço de E-mail" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Password)
+        @Html.PasswordFor(model => model.Password, new { @class = "form-control", placeholder = "Senha" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Repassword)
+        @Html.PasswordFor(model => model.Repassword, new { @class = "form-control", placeholder = "Repita a Senha" })
+    </div>
+
+    <button type="submit" class="btn btn-primary">Registrar</button>
+}
