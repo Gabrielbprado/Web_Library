@@ -26,7 +26,7 @@ namespace Web_Library.Controllers
             {
                 var res = await _userService.CreateUser(model);
                 
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index", "Emprestimo");
             }
             return View(model);
         }
@@ -44,8 +44,8 @@ namespace Web_Library.Controllers
                 var res = await _userService.LoginUser(model);
                 if (res != null)
                 {
-                    return RedirectToAction("Index", "Home");
-                }
+                return RedirectToAction("Index", "Emprestimo");
+            }
             
             return View(model);
         }

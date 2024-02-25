@@ -29,17 +29,24 @@
                         </li>
                     </ul>
                 </div>
-                <div class="AccountLogin">
-                    <ul class="nav nav-pills">
-                        <li class="nav-item">
-                            <a class="nav-link active btn-dark" id="cadastre-tab" asp-area="" asp-controller="Auth" asp-action="CadastreUser" >Cadastre-se</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link btn-dark" id="login-tab" asp-controller="Auth" asp-action="LoginUser">Login</a>
-                        </li>
-                    </ul>
-                  
-                </div>
+                @using Microsoft.AspNetCore.Identity
+
+                @inject SignInManager<UserModel> SignInManager
+
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <div class="AccountLogin">
+                        <ul class="nav nav-pills">
+                            <li class="nav-item">
+                                <a class="nav-link active btn-dark" id="cadastre-tab" asp-area="" asp-controller="Auth" asp-action="CadastreUser">Cadastre-se</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link btn-dark" id="login-tab" asp-controller="Auth" asp-action="LoginUser">Login</a>
+                            </li>
+                        </ul>
+                    </div>
+                }
+
             </div>
         </nav>
     </header>

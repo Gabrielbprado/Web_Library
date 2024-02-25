@@ -7,6 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Data\**" />
+    <Content Remove="Data\**" />
+    <EmbeddedResource Remove="Data\**" />
+    <None Remove="Data\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AutoMapper" Version="12.0.1" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
     <PackageReference Include="ClosedXML" Version="0.102.1" />
@@ -27,10 +34,6 @@
     <PackageReference Include="SQLitePCLRaw.core" Version="2.1.8" />
     <PackageReference Include="SQLitePCLRaw.provider.e_sqlite3.netstandard11" Version="1.1.14" />
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.3.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Data\Dtos\" />
   </ItemGroup>
 
 </Project>
