@@ -33,7 +33,7 @@
 
                 @inject SignInManager<UserModel> SignInManager
 
-                @if (User.Identity.IsAuthenticated)
+                @if (!User.Identity.IsAuthenticated)
                 {
                     <div class="AccountLogin">
                         <ul class="nav nav-pills">
@@ -42,6 +42,24 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link btn-dark" id="login-tab" asp-controller="Auth" asp-action="LoginUser">Login</a>
+                            </li>
+                        </ul>
+                    </div>
+                }else
+                {
+                    <div class="AccountLogin">
+                        <ul class="nav nav-pills">
+                            <li class="nav-item">
+                                <a class="nav-link active btn-dark " id="cadastre-tab" asp-area="" asp-controller="Auth" asp-action="Account">@User.Identity.Name</a>
+                            </li>
+                            <li>
+                                @using (Html.BeginForm("LogoutUser", "Auth", FormMethod.Post))
+                                {
+                                    <!-- Seu conteúdo dentro do formulário aqui -->
+
+                                    <button type="submit" class="nav-link active btn-dark" id="cadastre-tab">Logout</button>
+                                }
+
                             </li>
                         </ul>
                     </div>

@@ -49,5 +49,15 @@ namespace Web_Library.Controllers
             
             return View(model);
         }
+
+     
+
+        [HttpPost]
+        public async Task<IActionResult> LogoutUser()
+        {
+            await _userService.LogoutUser();                        
+            return RedirectToAction("Index", "Home");
+            
+        }
     }
 }

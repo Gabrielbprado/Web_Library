@@ -14,6 +14,9 @@ namespace Web_Library.Models
         [Compare("Password")]
         [NotMapped]
         public string Repassword { get; set; }
+
+
+        public virtual List<EmprestimosModel> EmprestimosModel { get; set; }
         public UserModel() : base()
         {
             
